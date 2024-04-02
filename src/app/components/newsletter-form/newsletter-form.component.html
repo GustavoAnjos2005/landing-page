@@ -1,0 +1,16 @@
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Fique por dentro de têndencias
+        </h3>
+        <p>Há muitas maneiras de se tornar um escritor de destaque, mas a chave está na prática e na persistência. Neste artigo, vamos discutir seis dicas fundamentais para ajudá-lo a aprimorar suas habilidades de escrita e se tornar um escritor profissional.
+        </p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name">Nome</label>
+        <input id="name" formControlName="name"/>
+        <label for="email">Email</label>
+        <input id="email"  formControlName="email"/>
+        <btn-primary btn-text="Se inscreva" variant="secondary" (submit)="onSubmit()" [disabled]="!newsletterForm.value" [loading]="loading()"></btn-primary>
+    </form>
+</section>
